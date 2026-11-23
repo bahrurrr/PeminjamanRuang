@@ -1,0 +1,342 @@
+/* ========================================================
+   PENSpace Campus Design System - Peminjaman Ruangan PENS
+   ======================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "System", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f7f8fb;
+}
+
+.app-root {
+    -fx-background-color: #f7f8fb;
+}
+
+/* TOPBAR NAVIGATION */
+.topbar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 14px 34px;
+    -fx-spacing: 24px;
+    -fx-border-color: transparent transparent #e7e9ee transparent;
+    -fx-border-width: 1px;
+}
+.brand-mark {
+    -fx-min-width: 36px; -fx-min-height: 36px; -fx-pref-width: 36px; -fx-pref-height: 36px;
+    -fx-alignment: center; -fx-background-color: #002ba6; -fx-background-radius: 10px;
+    -fx-text-fill: #f2cc00; -fx-font-size: 20px; -fx-font-weight: 800;
+}
+.brand-name { -fx-text-fill: #002ba6; -fx-font-size: 20px; -fx-font-weight: 800; }
+.brand-caption { -fx-text-fill: #7d8491; -fx-font-size: 8px; -fx-font-weight: 700; -fx-padding: 0 0 0 1px; }
+
+.nav-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6d7481;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-padding: 8px 12px;
+    -fx-cursor: hand;
+    -fx-background-radius: 8px;
+}
+.nav-link:hover {
+    -fx-text-fill: #002ba6;
+    -fx-background-color: #eef2ff;
+}
+.nav-link-active {
+    -fx-text-fill: #002ba6;
+    -fx-background-color: #e9efff;
+}
+
+.avatar {
+    -fx-min-width: 36px; -fx-min-height: 36px; -fx-pref-width: 36px; -fx-pref-height: 36px;
+    -fx-alignment: center; -fx-background-color: #f2cc00; -fx-background-radius: 50%;
+    -fx-text-fill: #002ba6; -fx-font-size: 11px; -fx-font-weight: 800;
+}
+
+/* CONTENT SCROLL */
+.content-scroll, .content-scroll > .viewport {
+    -fx-background-color: #f7f8fb;
+    -fx-border-color: transparent;
+}
+.content-scroll > .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10px;
+}
+
+.page-content {
+    -fx-spacing: 0;
+    -fx-background-color: transparent;
+}
+
+/* HERO SECTION */
+.hero-section {
+    -fx-padding: 16px 0 24px 0;
+}
+.eyebrow-line {
+    -fx-min-width: 24px; -fx-pref-width: 24px; -fx-min-height: 3px; -fx-max-height: 3px;
+    -fx-background-color: #f2cc00;
+}
+.eyebrow-text {
+    -fx-text-fill: #002ba6;
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 0.5px;
+}
+.hero-title {
+    -fx-text-fill: #202534;
+    -fx-font-size: 38px;
+    -fx-font-weight: 800;
+}
+.hero-title-blue {
+    -fx-text-fill: #002ba6;
+}
+
+/* PROCESS CARD (3 LANGKAH) */
+.process-card {
+    -fx-padding: 18px 20px;
+    -fx-background-color: #002ba6;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(15, 37, 92, 0.15), 18, 0.1, 0, 6);
+}
+.process-kicker { -fx-text-fill: #d7e1ff; -fx-font-size: 9px; -fx-font-weight: 800; }
+.process-count {
+    -fx-padding: 4px 8px;
+    -fx-background-color: #f2cc00;
+    -fx-background-radius: 999px;
+    -fx-text-fill: #002ba6;
+    -fx-font-size: 8px;
+    -fx-font-weight: 800;
+}
+.process-title { -fx-text-fill: #ffffff; -fx-font-size: 15px; -fx-font-weight: 800; }
+.step-number {
+    -fx-min-width: 26px; -fx-min-height: 26px; -fx-pref-width: 26px; -fx-pref-height: 26px;
+    -fx-alignment: center; -fx-background-color: rgba(255,255,255,0.1);
+    -fx-background-radius: 7px;
+    -fx-border-color: rgba(255,255,255,0.25); -fx-border-radius: 7px;
+    -fx-text-fill: #f2cc00; -fx-font-size: 9px; -fx-font-weight: 800;
+}
+.step-title { -fx-text-fill: #ffffff; -fx-font-size: 10px; -fx-font-weight: 800; }
+.step-detail { -fx-text-fill: #cbd8ff; -fx-font-size: 9px; }
+
+/* SEARCH & FILTER PANEL */
+.search-panel {
+    -fx-padding: 12px 14px;
+    -fx-spacing: 10px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 16px;
+    -fx-border-color: #e7e9ee;
+    -fx-border-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(15,37,92,0.06), 20, 0.1, 0, 5);
+}
+.search-field { -fx-padding: 4px 6px; -fx-background-color: transparent; }
+.field-label { -fx-text-fill: #7f8795; -fx-font-size: 9px; -fx-font-weight: 800; }
+.search-divider {
+    -fx-min-width: 1px; -fx-pref-width: 1px; -fx-min-height: 36px;
+    -fx-background-color: #e7e9ee;
+}
+.field-control {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-color: #dfe3eb;
+    -fx-border-radius: 8px;
+    -fx-padding: 7px 10px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #202534;
+}
+.field-control:focused {
+    -fx-border-color: #002ba6;
+}
+
+.primary-button {
+    -fx-min-height: 38px;
+    -fx-padding: 0 20px;
+    -fx-background-color: #002ba6;
+    -fx-background-radius: 9px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-cursor: hand;
+}
+.primary-button:hover {
+    -fx-background-color: #08236f;
+}
+
+/* RESULTS & HEADERS */
+.results-header { -fx-padding: 26px 0 12px 0; -fx-spacing: 10px; }
+.results-heading { -fx-text-fill: #202534; -fx-font-size: 18px; -fx-font-weight: 800; }
+.results-count { -fx-text-fill: #70798a; -fx-font-size: 11px; }
+
+.filter-sort-row { -fx-padding: 0 0 16px 0; }
+.filter-bar { -fx-spacing: 8px; }
+.filter-button {
+    -fx-padding: 7px 14px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 999px;
+    -fx-border-color: #dfe3eb;
+    -fx-border-radius: 999px;
+    -fx-text-fill: #657083;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
+}
+.filter-button:hover { -fx-border-color: #002ba6; -fx-text-fill: #002ba6; }
+.filter-button:selected {
+    -fx-background-color: #f2cc00;
+    -fx-border-color: #f2cc00;
+    -fx-text-fill: #002ba6;
+}
+
+/* ROOM CARDS */
+.room-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15px;
+    -fx-border-color: #e6e9ef;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(15,37,92,0.04), 10, 0.1, 0, 3);
+}
+.room-photo { -fx-background-color: #e6eaf2; -fx-background-radius: 15px 15px 0 0; }
+.room-badge {
+    -fx-padding: 6px 10px;
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-background-radius: 999px;
+    -fx-text-fill: #002ba6;
+    -fx-font-size: 9px;
+    -fx-font-weight: 800;
+}
+.room-card-body { -fx-padding: 16px; }
+.room-name { -fx-text-fill: #202534; -fx-font-size: 15px; -fx-font-weight: 800; }
+.room-meta { -fx-text-fill: #606b7d; -fx-font-size: 10px; }
+.amenities { -fx-padding: 4px 0 10px 0; }
+.amenity-chip {
+    -fx-padding: 5px 8px;
+    -fx-background-color: #f2f3f6;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #5f6878;
+    -fx-font-size: 9px;
+}
+.status-dot {
+    -fx-min-width: 7px; -fx-min-height: 7px; -fx-pref-width: 7px; -fx-pref-height: 7px;
+    -fx-max-width: 7px; -fx-max-height: 7px;
+    -fx-background-color: #49a76a; -fx-background-radius: 999px;
+}
+.availability-text { -fx-text-fill: #35714d; -fx-font-size: 10px; -fx-font-weight: 800; }
+.book-button {
+    -fx-padding: 8px 14px;
+    -fx-background-color: #e9efff;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #002ba6;
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+    -fx-cursor: hand;
+}
+.book-button:hover {
+    -fx-background-color: #002ba6;
+    -fx-text-fill: #ffffff;
+}
+
+/* SESSION CHIPS IN CARD */
+.session-row { -fx-spacing: 6px; -fx-padding: 2px 0 10px 0; }
+.session-chip-avail {
+    -fx-padding: 4px 7px;
+    -fx-background-color: #eef9f2;
+    -fx-border-color: #c4ebd0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-text-fill: #256b3e;
+    -fx-font-size: 8px;
+    -fx-font-weight: 700;
+}
+.session-chip-booked {
+    -fx-padding: 4px 7px;
+    -fx-background-color: #f5f6f8;
+    -fx-border-color: #e3e6ec;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-text-fill: #9aa1af;
+    -fx-font-size: 8px;
+}
+
+/* TABLES & CARDS FOR MEMBER / RIWAYAT / RUANG */
+.card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14px;
+    -fx-border-color: #e7e9ee;
+    -fx-border-radius: 14px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(15,37,92,0.04), 12, 0.1, 0, 4);
+}
+.card-title { -fx-font-size: 15px; -fx-font-weight: 800; -fx-text-fill: #202534; }
+.muted { -fx-text-fill: #70798a; -fx-font-size: 10px; }
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.table-view .column-header-background {
+    -fx-background-color: #f7f8fb;
+    -fx-background-radius: 8px 8px 0 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 10px 8px;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #606b7d;
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+}
+.table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent transparent #f0f2f5 transparent;
+    -fx-border-width: 1px;
+    -fx-padding: 6px 0;
+}
+.table-row-cell:hover { -fx-background-color: #f8faff; }
+
+/* NOTIFIKASI */
+.notif {
+    -fx-padding: 12px 16px;
+    -fx-background-radius: 10px;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+}
+.notif-sukses {
+    -fx-background-color: #eefbf3;
+    -fx-border-color: #9fe1b8;
+    -fx-border-radius: 10px;
+    -fx-text-fill: #1f7a42;
+}
+.notif-error {
+    -fx-background-color: #fdf2f2;
+    -fx-border-color: #f8b4b4;
+    -fx-border-radius: 10px;
+    -fx-text-fill: #9b1c1c;
+}
+
+/* BADGES */
+.badge {
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 999px;
+    -fx-font-size: 9px;
+    -fx-font-weight: 800;
+}
+.badge-available { -fx-background-color: #def7ec; -fx-text-fill: #03543f; }
+.badge-past { -fx-background-color: #f3f4f6; -fx-text-fill: #6b7280; }
+
+.btn-danger-sm {
+    -fx-background-color: #fde8e8;
+    -fx-text-fill: #9b1c1c;
+    -fx-font-size: 9px;
+    -fx-font-weight: 700;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+.btn-danger-sm:hover { -fx-background-color: #f8b4b4; }
+
+/* DIALOG BOOKING PENSPACE */
+.dialog-pane { -fx-background-color: #ffffff; }
+.dialog-content { -fx-background-color: #ffffff; }
+.booking-summary { -fx-padding: 14px; -fx-background-color: #f4f6fa; -fx-background-radius: 10px; }
+.summary-label { -fx-text-fill: #747d8c; -fx-font-size: 10px; }
+.summary-value { -fx-text-fill: #202534; -fx-font-size: 11px; -fx-font-weight: 700; }

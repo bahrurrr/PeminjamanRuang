@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "DatabaseConnection",
+            "request": "launch",
+            "mainClass": "peminjamanruangpens.service.DatabaseConnection",
+            "projectName": "PeminjamanRuang"
+        },
+        {
+            "type": "java",
+            "name": "Launch App (JavaFX)",
+            "request": "launch",
+            "mainClass": "peminjamanruangpens.App",
+            "projectName": "PeminjamanRuang"
+        }
+    ]
+}
