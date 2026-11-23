@@ -1,4 +1,4 @@
-package peminjamanruangpens.ui;
+package peminjamanruangpens.ui.pages;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.geometry.Pos;
@@ -7,6 +7,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import peminjamanruangpens.model.Peminjaman;
 import peminjamanruangpens.service.SistemPeminjaman;
+import peminjamanruangpens.ui.components.CardPanel;
+import peminjamanruangpens.ui.components.Notifikasi;
 
 import java.time.format.DateTimeFormatter;
 
@@ -107,8 +109,7 @@ public class RiwayatPage extends Halaman {
         tabel.getColumns().addAll(colWaktu, colTgl, colRuang, colSesi, colMember, colStatus, colAksi);
         tabel.setPlaceholder(new Label("Belum ada riwayat transaksi peminjaman"));
 
-        VBox wadah = new VBox(tabel);
-        wadah.getStyleClass().add("card");
+        CardPanel wadah = new CardPanel(tabel);
         VBox.setVgrow(wadah, Priority.ALWAYS);
 
         return new VBox(16, notif, wadah);

@@ -1,4 +1,4 @@
-package peminjamanruangpens.ui;
+package peminjamanruangpens.ui.components;
 
 import javafx.animation.PauseTransition;
 import javafx.scene.control.Label;

@@ -1,13 +1,13 @@
-package peminjamanruangpens.ui;
+package peminjamanruangpens.ui.pages;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import peminjamanruangpens.service.SistemPeminjaman;
+import peminjamanruangpens.ui.components.PageHeader;
 
 /**
  * ABSTRACT CLASS: dasar semua halaman/tab dalam aplikasi.
@@ -26,6 +26,7 @@ public abstract class Halaman {
     public abstract String getSubjudul();
 
     protected abstract Node buatIsi();
+    protected boolean hasStandardHeader() { return true; }
 
     /** Template Method: merakit header standar + isi spesifik subclass. */
     public Node getTampilan() {
@@ -33,16 +34,8 @@ public abstract class Halaman {
             VBox wadah = new VBox(18);
             wadah.setMaxWidth(1260);
 
-            // Jika bukan BookingPage (BookingPage punya Hero section sendiri), tampilkan header standar
-            if (!getNamaMenu().contains("Cari & Booking")) {
-                VBox header = new VBox(4);
-                Label lblJudul = new Label(getJudul());
-                lblJudul.getStyleClass().add("hero-title");
-                lblJudul.setStyle("-fx-font-size: 26px; -fx-padding: 10px 0 0 0;");
-                Label lblSub = new Label(getSubjudul());
-                lblSub.getStyleClass().add("results-count");
-                header.getChildren().addAll(lblJudul, lblSub);
-                wadah.getChildren().add(header);
+            if (hasStandardHeader()) {
+                wadah.getChildren().add(new PageHeader(getJudul(), getSubjudul()));
             }
 
             wadah.getChildren().add(buatIsi());

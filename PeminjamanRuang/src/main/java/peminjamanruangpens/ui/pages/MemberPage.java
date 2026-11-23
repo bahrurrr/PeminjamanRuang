@@ -1,12 +1,13 @@
-package peminjamanruangpens.ui;
+package peminjamanruangpens.ui.pages;
 
 import javafx.beans.property.SimpleStringProperty;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import peminjamanruangpens.model.Member;
 import peminjamanruangpens.service.SistemPeminjaman;
+import peminjamanruangpens.ui.components.CardPanel;
+import peminjamanruangpens.ui.components.Notifikasi;
 
 public class MemberPage extends Halaman {
     private TextField txtNama;
@@ -45,17 +46,16 @@ public class MemberPage extends Halaman {
         ketKuota.setWrapText(true);
 
         Button btnDaftar = new Button("Daftarkan Member");
-        btnDaftar.getStyleClass().add("btn-primary");
+        btnDaftar.getStyleClass().add("primary-button");
         btnDaftar.setMaxWidth(Double.MAX_VALUE);
         btnDaftar.setOnAction(e -> submit());
 
-        VBox form = new VBox(12,
+        VBox form = new CardPanel(12,
                 buatLabelField("Nama Lengkap"), txtNama,
                 buatLabelField("NRP / ID (3 digit)"), txtNrp,
                 buatLabelField("Tipe Member"), comboTipe,
                 ketKuota,
                 btnDaftar);
-        form.getStyleClass().add("card");
         form.setPrefWidth(320);
         return form;
     }
@@ -83,8 +83,7 @@ public class MemberPage extends Halaman {
         tabel.getColumns().addAll(colNrp, colNama, colTipe, colKuota);
         tabel.setPlaceholder(new Label("Belum ada member terdaftar"));
 
-        VBox wadah = new VBox(tabel);
-        wadah.getStyleClass().add("card");
+        CardPanel wadah = new CardPanel(tabel);
         HBox.setHgrow(wadah, Priority.ALWAYS);
         return wadah;
     }

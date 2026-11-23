@@ -1,12 +1,13 @@
-package peminjamanruangpens.ui;
+package peminjamanruangpens.ui.pages;
 
 import javafx.beans.property.SimpleStringProperty;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import peminjamanruangpens.model.Ruang;
 import peminjamanruangpens.service.SistemPeminjaman;
+import peminjamanruangpens.ui.components.CardPanel;
+import peminjamanruangpens.ui.components.Notifikasi;
 
 public class RuangPage extends Halaman {
     private TextField txtNama;
@@ -41,16 +42,15 @@ public class RuangPage extends Halaman {
         comboJenis.setMaxWidth(Double.MAX_VALUE);
 
         Button btnTambah = new Button("Tambah Ruangan");
-        btnTambah.getStyleClass().add("btn-primary");
+        btnTambah.getStyleClass().add("primary-button");
         btnTambah.setMaxWidth(Double.MAX_VALUE);
         btnTambah.setOnAction(e -> submit());
 
-        VBox form = new VBox(12,
+        VBox form = new CardPanel(12,
                 buatLabelField("Nama Ruangan"), txtNama,
                 buatLabelField("Kapasitas"), txtKapasitas,
                 buatLabelField("Jenis Ruangan"), comboJenis,
                 btnTambah);
-        form.getStyleClass().add("card");
         form.setPrefWidth(320);
         return form;
     }
@@ -78,8 +78,7 @@ public class RuangPage extends Halaman {
         tabel.getColumns().addAll(colNama, colJenis, colKap, colFas);
         tabel.setPlaceholder(new Label("Belum ada ruangan terdaftar"));
 
-        VBox wadah = new VBox(tabel);
-        wadah.getStyleClass().add("card");
+        CardPanel wadah = new CardPanel(tabel);
         HBox.setHgrow(wadah, Priority.ALWAYS);
         return wadah;
     }
